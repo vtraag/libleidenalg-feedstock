@@ -1,15 +1,15 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 66846e3..cb53a73 100644
+index 22ed5b5..6e41291 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -13,6 +13,10 @@ include(packaging)
  
- find_package(igraph 0.10 CONFIG REQUIRED)
+ find_package(igraph 1 CONFIG REQUIRED)
  
 +set_target_properties(igraph::igraph PROPERTIES
 +  INTERFACE_LINK_LIBRARIES ""
 +)
 +
- # Set default symbol visibility to hidden
- set(CMAKE_C_VISIBILITY_PRESET hidden)
- set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+ # Set C++ standard version
+ set(CMAKE_CXX_STANDARD 11)
+ set(CMAKE_CXX_STANDARD_REQUIRED True)
