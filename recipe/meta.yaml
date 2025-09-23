@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - ninja
   host:
@@ -29,6 +30,7 @@ test:
     - test.cpp
   requires:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
 
 about:
   home: https://github.com/vtraag/libleidenalg
