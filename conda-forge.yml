@@ -14,4 +14,4 @@ provider:
   linux_ppc64le: default
 conda_build:
   error_overlinking: true
-test: native_and_emulated
+test: native
